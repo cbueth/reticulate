@@ -54,6 +54,7 @@ Suggests:
     glue,
     cli,
     rmarkdown,
+    repr,
     pillar,
     testthat
 LinkingTo: Rcpp

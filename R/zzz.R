@@ -65,6 +65,7 @@
   ## Register S3 method for suggested package
   s3_register <- asNamespace("rlang")$s3_register
   s3_register("pillar::type_sum", "python.builtin.object")
+  s3_register("repr::repr_html", "python.builtin.object")
 
   if (is_positron()) {
 

@@ -1,5 +1,11 @@
 # reticulate (development version)
 
+- Python objects with a `_repr_html_()` method now use it when displayed
+  through the `repr` package, for example in IRkernel/Jupyter. This adds
+  rich HTML display for polars DataFrames and other objects. It does not
+  change polars-to-R data frame conversion. The integration is optional and
+  only active when `repr` is installed (#1319).
+
 - Python integers outside the 32-bit signed range now convert to R doubles
   instead of being truncated. Lists containing such integers convert to double
   vectors. Integers too large for a double raise an error
